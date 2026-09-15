@@ -1,5 +1,5 @@
 <?php
-include 'components/layout/header.php';
+include dirname(__FILE__) . '/../../components/layout/header.php';
 ?>
 
 <section class="content">
@@ -231,5 +231,5 @@ include 'components/layout/header.php';
 </section>
 
 <?php
-include 'components/layout/footer.php';
+include dirname(__FILE__) . '/../../components/layout/footer.php';
 ?>

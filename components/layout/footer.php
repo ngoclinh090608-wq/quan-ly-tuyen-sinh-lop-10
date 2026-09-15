@@ -6,7 +6,9 @@
 
 </div>
 
-<script src="/quan-ly-tuyen-sinh-lop-10/assets/js/main.js"></script>
+<script src="<?php echo htmlspecialchars($appBase); ?>/assets/js/main.js"></script>
+<script src="<?php echo htmlspecialchars($appBase); ?>/assets/js/admissions-core.js"></script>
+<script src="<?php echo htmlspecialchars($appBase); ?>/assets/js/admissions.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,5 @@
-<aside class="sidebar">
+<aside class="sidebar" id="appSidebar">
+    <button class="mobile-close" aria-label="Đóng menu">✕</button>
     <div class="sidebar-logo">
         <div class="logo-icon">10</div>
         <div>
@@ -8,7 +9,7 @@
     </div>
 
     <nav class="sidebar-menu">
-        <a href="/quan-ly-tuyen-sinh-lop-10/" class="menu-item active">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/" class="menu-item">
             <span class="menu-icon">⌂</span>
             <span>Trang chủ</span>
         </a>
@@ -47,16 +48,19 @@
             <span>Điểm thi</span>
         </a>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoi-dong-phuc-khao/quan-ly-ket-qua-phuc-khao.php" class="menu-item <?php echo $activePage === 'review' ? 'active' : ''; ?>">
             <span class="menu-icon">↻</span>
-            <span>Phúc khảo</span>
+            <span>Kết quả phúc khảo</span>
+        </a>
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoc-sinh/gui-yeu-cau-phuc-khao.php" class="menu-item <?php echo $activePage === 'request' ? 'active' : ''; ?>">
+            <span class="menu-icon">✉</span><span>Gửi yêu cầu phúc khảo</span>
         </a>
 
         <div class="menu-title">KẾT QUẢ</div>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoi-dong-tuyen-sinh/xet-tuyen.php" class="menu-item <?php echo $activePage === 'admission' ? 'active' : ''; ?>">
             <span class="menu-icon">☆</span>
-            <span>Xét tuyển</span>
+            <span>Xét tuyển NV1, NV2, NV3</span>
         </a>
 
         <a href="#" class="menu-item">

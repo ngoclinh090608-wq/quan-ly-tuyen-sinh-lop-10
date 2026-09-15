@@ -1,3 +1,11 @@
+<?php
+$scriptPath = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
+$pagesPosition = strpos($scriptPath, '/pages/');
+$appBase = $pagesPosition !== false ? substr($scriptPath, 0, $pagesPosition) : rtrim(dirname($scriptPath), '/');
+if (!isset($activePage)) $activePage = '';
+if (!isset($displayName)) $displayName = 'Quản trị viên';
+if (!isset($displayRole)) $displayRole = 'Ban Tuyển sinh';
+?>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -8,21 +16,23 @@
     <title>Quản lý tuyển sinh lớp 10</title>
 
     <link rel="stylesheet"
-          href="/quan-ly-tuyen-sinh-lop-10/assets/css/style.css">
+          href="<?php echo htmlspecialchars($appBase); ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo htmlspecialchars($appBase); ?>/assets/css/admissions.css">
 </head>
 
 <body>
 
 <div class="app">
 
-    <?php include __DIR__ . '/sidebar.php'; ?>
+    <?php include dirname(__FILE__) . '/sidebar.php'; ?>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
     <main class="main">
 
         <header class="topbar">
 
             <div class="topbar-left">
-                <button class="menu-button">☰</button>
+                <button class="menu-button" aria-label="Mở menu" aria-expanded="false" aria-controls="appSidebar">☰</button>
 
                 <div>
                     <h3>Hệ thống tuyển sinh lớp 10</h3>
@@ -40,8 +50,8 @@
                     <div class="avatar">A</div>
 
                     <div class="user-info">
-                        <strong>Quản trị viên</strong>
-                        <span>Ban Tuyển sinh</span>
+                        <strong><?php echo htmlspecialchars($displayName); ?></strong>
+                        <span><?php echo htmlspecialchars($displayRole); ?></span>
                     </div>
 
                     <span class="arrow">⌄</span>
