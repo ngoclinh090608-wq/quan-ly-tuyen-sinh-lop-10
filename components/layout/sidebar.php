@@ -14,6 +14,11 @@
             <span>Trang chủ</span>
         </a>
 
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/dashboard/index.php" class="menu-item <?php echo $activePage === 'dashboard' ? 'active' : ''; ?>">
+            <span class="menu-icon">📊</span>
+            <span>Bảng điều khiển</span>
+        </a>
+
         <div class="menu-title">TUYỂN SINH</div>
 
         <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoc-sinh/xem-thong-tin-tuyen-sinh.php" class="menu-item <?php echo $activePage === 'admission-info' ? 'active' : ''; ?>">
@@ -38,19 +43,24 @@
             <span>Cấp số báo danh</span>
         </a>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoi-dong-ra-de/xem-phan-cong-ra-de.php" class="menu-item <?php echo $activePage === 'question-assignment' ? 'active' : ''; ?>">
+            <span class="menu-icon">📜</span>
+            <span>Phân công ra đề</span>
+        </a>
+
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/so-gd/tao-thong-tin-phong-thi.php" class="menu-item <?php echo $activePage === 'exam-rooms' ? 'active' : ''; ?>">
             <span class="menu-icon">□</span>
             <span>Phòng thi</span>
         </a>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/so-gd/phan-phong-thi.php" class="menu-item <?php echo $activePage === 'assign-rooms' ? 'active' : ''; ?>">
             <span class="menu-icon">◎</span>
             <span>Phân phòng thi</span>
         </a>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoi-dong-cham-thi/nhap-diem-thi.php" class="menu-item <?php echo $activePage === 'nhap-diem-thi' ? 'active' : ''; ?>">
             <span class="menu-icon">✎</span>
-            <span>Điểm thi</span>
+            <span>Nhập điểm thi</span>
         </a>
 
         <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoi-dong-phuc-khao/quan-ly-ket-qua-phuc-khao.php" class="menu-item <?php echo $activePage === 'review' ? 'active' : ''; ?>">

@@ -1,4 +1,7 @@
 <?php
+$activePage = 'dashboard';
+$displayName = 'Ban Tuyển sinh Sở GD&ĐT';
+$displayRole = 'Quản trị viên hệ thống';
 include dirname(__FILE__) . '/../../components/layout/header.php';
 ?>
 
@@ -102,15 +105,22 @@ include dirname(__FILE__) . '/../../components/layout/header.php';
                 </div>
 
 
-                <div class="process-row">
+                <div class="process-row" style="cursor: default;" title="Quy trình Tạo phòng thi & Phân phòng thi">
 
                     <div class="process-number">
                         2
                     </div>
 
                     <div class="process-info">
-                        <strong>Phân phòng thi</strong>
-                        <span>Đang thực hiện</span>
+                        <strong>Tạo phòng thi &amp; Phân phòng</strong>
+                        <div style="display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap;">
+                            <a href="../so-gd/tao-thong-tin-phong-thi.php" class="secondary-button" style="padding: 3px 8px; font-size: 11px; text-decoration: none; border-radius: 4px; display: inline-flex; align-items: center; gap: 3px;" title="Use Case 6: Tạo thông tin phòng thi">
+                                <span>□</span> Tạo phòng thi (UC6)
+                            </a>
+                            <a href="../so-gd/phan-phong-thi.php" class="primary-button" style="padding: 3px 8px; font-size: 11px; text-decoration: none; border-radius: 4px; display: inline-flex; align-items: center; gap: 3px;" title="Use Case 7: Phân phòng thi cho thí sinh">
+                                <span>◎</span> Phân phòng thi (UC7)
+                            </a>
+                        </div>
                     </div>
 
                     <span class="status processing">
@@ -120,25 +130,29 @@ include dirname(__FILE__) . '/../../components/layout/header.php';
                 </div>
 
 
-                <div class="process-row">
+                <div class="process-row" style="cursor: default;" title="Công tác Ra đề thi &amp; Tổ chức thi">
 
                     <div class="process-number">
                         3
                     </div>
 
                     <div class="process-info">
-                        <strong>Tổ chức thi</strong>
-                        <span>Chưa bắt đầu</span>
+                        <strong>Ra đề &amp; Tổ chức thi</strong>
+                        <div style="display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap;">
+                            <a href="../hoi-dong-ra-de/xem-phan-cong-ra-de.php" class="primary-button" style="padding: 3px 8px; font-size: 11px; text-decoration: none; border-radius: 4px; display: inline-flex; align-items: center; gap: 3px;" title="Use Case 8: Xem phân công ra đề thi">
+                                <span>📜</span> Phân công ra đề (UC8)
+                            </a>
+                        </div>
                     </div>
 
-                    <span class="status waiting">
-                        Chờ thực hiện
+                    <span class="status processing">
+                        Đang xử lý
                     </span>
 
                 </div>
 
 
-                <div class="process-row">
+                <div class="process-row" onclick="location.href='../hoi-dong-cham-thi/nhap-diem-thi.php'" style="cursor: pointer;" title="Đi đến chức năng Nhập điểm thi">
 
                     <div class="process-number">
                         4
@@ -146,11 +160,11 @@ include dirname(__FILE__) . '/../../components/layout/header.php';
 
                     <div class="process-info">
                         <strong>Chấm thi và nhập điểm</strong>
-                        <span>Chưa bắt đầu</span>
+                        <span>Đang thực hiện</span>
                     </div>
 
-                    <span class="status waiting">
-                        Chờ thực hiện
+                    <span class="status processing">
+                        Đang xử lý
                     </span>
 
                 </div>

@@ -47,7 +47,7 @@ if (!isset($displayRole)) $displayRole = 'Ban Tuyển sinh';
                 </button>
 
                 <div class="user">
-                    <div class="avatar">A</div>
+                    <div class="avatar"><?php echo mb_substr($displayName, 0, 1, 'UTF-8'); ?></div>
 
                     <div class="user-info">
                         <strong><?php echo htmlspecialchars($displayName); ?></strong>
