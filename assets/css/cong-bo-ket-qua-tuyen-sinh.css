@@ -1,0 +1,405 @@
+.publish-page {
+    padding: 28px 30px;
+    background: #F5F7FB;
+    min-height: calc(100vh - 70px);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    margin: 0 0 7px;
+    color: #172B4D;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.page-header p {
+    margin: 0;
+    color: #6B778C;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.publish-card {
+    background: #FFFFFF;
+    border: 1px solid #E6EAF0;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    padding: 24px;
+}
+
+.card-header {
+    margin-bottom: 22px;
+}
+
+.card-header h2,
+.result-header h2 {
+    margin: 0 0 6px;
+    color: #172B4D;
+    font-size: 18px;
+}
+
+.card-header p,
+.result-header p {
+    margin: 0;
+    color: #6B778C;
+    font-size: 13px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: #344563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group select {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #D7DCE5;
+    border-radius: 6px;
+    background: #FFFFFF;
+    color: #172B4D;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group select:focus {
+    border-color: #1769E0;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #EDF0F5;
+}
+
+.status-label {
+    color: #344563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-unpublished {
+    background: #FFF4E5;
+    color: #B76E00;
+}
+
+.status-published {
+    background: #E7F6EC;
+    color: #198754;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.result-header {
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #F7F9FC;
+}
+
+th {
+    padding: 13px 14px;
+    border-bottom: 1px solid #E6EAF0;
+    color: #344563;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #EDF0F5;
+    color: #42526E;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #FAFBFD;
+}
+
+
+/* =========================
+   RESULT STATUS
+========================= */
+
+.result-pass {
+    padding: 5px 10px;
+    border-radius: 15px;
+    background: #E7F6EC;
+    color: #198754;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.result-fail {
+    padding: 5px 10px;
+    border-radius: 15px;
+    background: #FDECEC;
+    color: #C0392B;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary {
+    display: flex;
+    gap: 45px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #EDF0F5;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.summary-item span {
+    color: #6B778C;
+    font-size: 13px;
+}
+
+.summary-item strong {
+    color: #172B4D;
+    font-size: 21px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.publish-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+}
+
+.btn-primary,
+.btn-secondary {
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: none;
+    background: #1769E0;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #1258BE;
+}
+
+.btn-primary:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.published-button {
+    background: #198754;
+}
+
+
+/* =========================
+   ALERT
+========================= */
+
+.system-alert {
+    padding: 13px 16px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.system-alert.success {
+    background: #E7F6EC;
+    border: 1px solid #B9E3C5;
+    color: #176B36;
+}
+
+.system-alert.error {
+    background: #FDECEC;
+    border: 1px solid #F3C1C1;
+    color: #B42318;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(23, 43, 77, 0.45);
+    z-index: 9999;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal {
+    width: 480px;
+    max-width: calc(100% - 30px);
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22px;
+    border-bottom: 1px solid #EDF0F5;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #172B4D;
+    font-size: 17px;
+}
+
+.modal-close {
+    border: none;
+    background: none;
+    color: #6B778C;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 22px;
+}
+
+.modal-body p {
+    margin: 0 0 18px;
+    color: #344563;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.warning-box {
+    padding: 13px 15px;
+    border-radius: 6px;
+    background: #FFF4E5;
+    color: #8A5700;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 22px;
+    border-top: 1px solid #EDF0F5;
+}
+
+.btn-secondary {
+    border: 1px solid #D7DCE5;
+    background: #FFFFFF;
+    color: #344563;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .publish-page {
+        padding: 20px 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+}
