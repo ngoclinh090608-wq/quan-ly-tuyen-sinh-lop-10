@@ -324,6 +324,7 @@ include '../../components/layout/header.php';
                         <th>Điểm trước</th>
                         <th>Điểm sau</th>
                         <th>Người chỉnh sửa</th>
+                        <th>Lý do chỉnh sửa</th>
                         <th>Thời gian</th>
                     </tr>
                 </thead>
@@ -356,6 +357,7 @@ const ketQua = {
                 cu: "8.00",
                 moi: "8.50",
                 nguoi: "Hội đồng chấm thi",
+                lydo: "Điều chỉnh sau khi đối chiếu biên bản chấm thi",
                 thoigian: "15/09/2026 09:20"
             }
         ]
@@ -376,6 +378,7 @@ const ketQua = {
                 cu: "8.50",
                 moi: "8.75",
                 nguoi: "Hội đồng chấm thi",
+                lydo: "Cập nhật lại điểm theo kết quả kiểm tra",
                 thoigian: "14/09/2026 15:10"
             },
             {
@@ -383,6 +386,7 @@ const ketQua = {
                 cu: "8.75",
                 moi: "9.00",
                 nguoi: "Hội đồng chấm thi",
+                lydo: "Điều chỉnh sau khi rà soát kết quả chấm",
                 thoigian: "15/09/2026 08:40"
             }
         ]
@@ -412,9 +416,25 @@ function traCuu() {
     */
     if (!kyThi || !monThi || !maPhach) {
 
+        const thieu = [];
+
+        if (!kyThi) {
+            thieu.push("Kỳ thi");
+        }
+
+        if (!monThi) {
+            thieu.push("Môn thi");
+        }
+
+        if (!maPhach) {
+            thieu.push("Mã phách");
+        }
+
         message.className = "message error";
         message.innerHTML =
-            "Vui lòng chọn đầy đủ điều kiện tra cứu.";
+            "Vui lòng chọn đầy đủ điều kiện tra cứu: "
+            + thieu.join(", ")
+            + ".";
 
         return;
     }
@@ -439,7 +459,9 @@ function traCuu() {
 
     const monDaChon =
         document.getElementById("monThi")
-        .options[document.getElementById("monThi").selectedIndex]
+        .options[
+            document.getElementById("monThi").selectedIndex
+        ]
         .text;
 
 
@@ -529,6 +551,7 @@ function xemLichSu(maPhach) {
                 <td>${item.cu}</td>
                 <td class="status-change">${item.moi}</td>
                 <td>${item.nguoi}</td>
+                <td>${item.lydo}</td>
                 <td>${item.thoigian}</td>
             </tr>
         `;
