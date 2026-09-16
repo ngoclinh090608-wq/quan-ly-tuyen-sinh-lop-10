@@ -21,7 +21,7 @@
 
         <nav class="public-nav">
             <a href="#home">Trang chủ</a>
-            <a href="#info">Thông tin tuyển sinh</a>
+            <a href="pages/hoc-sinh/xem-thong-tin-tuyen-sinh.php">Thông tin tuyển sinh</a>
             <a href="#schedule">Lịch tuyển sinh</a>
             <a href="#guide">Hướng dẫn</a>
 
@@ -57,7 +57,7 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#info" class="btn-main">
+                    <a href="pages/hoc-sinh/xem-thong-tin-tuyen-sinh.php" class="btn-main">
                         Xem thông tin tuyển sinh
                     </a>
 
@@ -126,13 +126,23 @@
             <div class="quick-grid">
 
                 <div class="quick-card">
+                    <div class="quick-icon">TS</div>
+                    <h3>Thông tin tuyển sinh</h3>
+                    <p>
+                        Tra cứu chỉ tiêu, trường THPT, hệ đào tạo,
+                        phương thức tuyển sinh và học phí.
+                    </p>
+                    <a href="pages/hoc-sinh/xem-thong-tin-tuyen-sinh.php">Xem chi tiết →</a>
+                </div>
+
+                <div class="quick-card">
                     <div class="quick-icon">NV</div>
                     <h3>Nguyện vọng xét tuyển</h3>
                     <p>
                         Theo dõi và quản lý các nguyện vọng đăng ký
                         xét tuyển.
                     </p>
-                    <a href="#">Xem chi tiết →</a>
+                    <a href="pages/hoc-sinh/quan-ly-nguyen-vong-xet-tuyen-lop-10.php">Đăng ký / Chỉnh sửa →</a>
                 </div>
 
 
@@ -163,7 +173,7 @@
                     <p>
                         Theo dõi kết quả xét tuyển và tình trạng nhập học.
                     </p>
-                    <a href="#">Tra cứu →</a>
+                    <a href="pages/hoc-sinh/tra-cuu-ket-qua-xet-tuyen.php">Tra cứu kết quả →</a>
                 </div>
 
             </div>
