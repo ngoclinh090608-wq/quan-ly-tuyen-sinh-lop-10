@@ -1,0 +1,487 @@
+/* Stylesheet cho chức năng: Quản lý nguyện vọng xét tuyển lớp 10 (Use Case 2) */
+
+/* Thẻ thông tin thí sinh */
+.candidate-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    box-shadow: 0 2px 6px rgba(23, 105, 224, 0.04);
+}
+
+.candidate-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.candidate-avatar-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1769e0, #2b7cf5);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(23, 105, 224, 0.25);
+}
+
+.candidate-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #252b36;
+    margin-bottom: 4px;
+}
+
+.candidate-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #687282;
+}
+
+.candidate-meta span strong {
+    color: #252b36;
+}
+
+/* Thẻ nguyện vọng (Wish Cards) */
+.wish-section {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.wish-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid #eef1f5;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+}
+
+.wish-section-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #252b36;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wish-limit-pill {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #eaf2ff;
+    color: #1769e0;
+}
+
+.wish-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wish-item-card {
+    background: #fafbfe;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: grid;
+    grid-template-columns: 80px 140px 1fr 120px 90px;
+    gap: 14px;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.wish-item-card:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(23, 105, 224, 0.06);
+}
+
+.wish-item-card.has-error {
+    border-color: #ef4444;
+    background: #fff8f8;
+}
+
+/* Huy hiệu thứ tự ưu tiên */
+.order-badge {
+    width: 68px;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.order-badge.nv1 {
+    background: #e8f1ff;
+    color: #1769e0;
+    border: 1px solid #c9dfff;
+}
+
+.order-badge.nv2 {
+    background: #f3e8ff;
+    color: #7c3aed;
+    border: 1px solid #e4caff;
+}
+
+.order-badge.nv3 {
+    background: #fff1df;
+    color: #c2410c;
+    border: 1px solid #fed7aa;
+}
+
+.order-badge.nvc {
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+}
+
+/* Trường chọn và nhập mã trường */
+.wish-code-input-wrap {
+    position: relative;
+}
+
+.wish-code-input {
+    width: 100%;
+    border: 1px solid #d8dee7;
+    border-radius: 7px;
+    padding: 8px 10px;
+    font: 700 13px Arial, sans-serif;
+    color: #1769e0;
+    background: #ffffff;
+    text-transform: uppercase;
+}
+
+.wish-code-input:focus {
+    outline: none;
+    border-color: #1769e0;
+    box-shadow: 0 0 0 3px rgba(23, 105, 224, 0.12);
+}
+
+.wish-school-select {
+    width: 100%;
+    border: 1px solid #d8dee7;
+    border-radius: 7px;
+    padding: 8px 10px;
+    font: 13px Arial, sans-serif;
+    color: #252b36;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.wish-school-select:focus {
+    outline: none;
+    border-color: #1769e0;
+}
+
+.wish-school-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.wish-school-meta {
+    font-size: 11px;
+    color: #7b8492;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wish-benchmark-cell {
+    font-size: 12px;
+    color: #4b5563;
+    text-align: center;
+}
+
+.wish-benchmark-cell strong {
+    display: block;
+    color: #1769e0;
+    font-size: 13px;
+}
+
+/* Nút thao tác điều hướng thứ tự và xóa */
+.wish-actions-cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.icon-btn {
+    border: 1px solid #d8dee7;
+    background: #ffffff;
+    color: #4b5563;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.15s ease;
+}
+
+.icon-btn:hover:not(:disabled) {
+    border-color: #1769e0;
+    color: #1769e0;
+    background: #eaf2ff;
+}
+
+.icon-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.icon-btn.danger:hover:not(:disabled) {
+    border-color: #ef4444;
+    color: #ef4444;
+    background: #fee2e2;
+}
+
+/* Nút thêm mới */
+.add-wish-btn {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border: 1px dashed #1769e0;
+    background: #f0f6ff;
+    color: #1769e0;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-wish-btn:hover:not(:disabled) {
+    background: #1769e0;
+    color: #ffffff;
+}
+
+.add-wish-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    border-color: #cbd5e1;
+    color: #94a3b8;
+    background: #f8fafc;
+}
+
+/* Thông báo lỗi inline của từng dòng */
+.wish-error-msg {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    color: #dc2626;
+    background: #fef2f2;
+    border-left: 3px solid #ef4444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 4px;
+    display: none;
+}
+
+/* Khối checkbox đăng ký chuyên */
+.specialized-toggle-wrap {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.specialized-toggle-wrap input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #1769e0;
+    cursor: pointer;
+}
+
+.specialized-toggle-wrap label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+}
+
+/* Khung quy chế & Lưu ý */
+.rule-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: #166534;
+}
+
+.rule-box h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #15803d;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rule-box ul {
+    margin-left: 18px;
+    line-height: 1.6;
+}
+
+/* Căn giữa hộp thoại xác nhận Modal */
+.action-confirm-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 540px;
+    width: calc(100% - 32px);
+    border: none;
+    border-radius: 14px;
+    padding: 0;
+    box-shadow: 0 24px 70px rgba(18, 25, 38, 0.35);
+    background: #ffffff;
+    color: #252b36;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.action-confirm-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    animation: modalCenterPop 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.action-confirm-dialog:not([open]) {
+    display: none;
+}
+
+.action-confirm-dialog::backdrop {
+    background: rgba(18, 25, 38, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.dialog-header {
+    padding: 20px 24px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dialog-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.dialog-body {
+    padding: 22px 24px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.dialog-footer {
+    padding: 14px 24px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Thẻ tóm tắt xác nhận lưu */
+.summary-wish-list {
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+}
+
+.summary-wish-list li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-wish-list li:last-child {
+    border-bottom: none;
+}
+
+/* Bảng in phiếu đăng ký (Print media) */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #printableWishReceipt, #printableWishReceipt * {
+        visibility: visible;
+    }
+    #printableWishReceipt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .topbar, .sidebar, .simulation-bar, .actions, .icon-btn, .add-wish-btn {
+        display: none !important;
+    }
+}
+
+/* Responsive cho thiết bị di động */
+@media (max-width: 860px) {
+    .wish-item-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .wish-actions-cell {
+        justify-content: flex-start;
+    }
+    .order-badge {
+        width: auto;
+        display: inline-block;
+        padding: 4px 12px;
+    }
+    .candidate-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
