@@ -16,12 +16,12 @@
 
         <div class="menu-title">TUYỂN SINH</div>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoc-sinh/xem-thong-tin-tuyen-sinh.php" class="menu-item <?php echo $activePage === 'admission-info' ? 'active' : ''; ?>">
             <span class="menu-icon">▣</span>
             <span>Thông tin tuyển sinh</span>
         </a>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoc-sinh/quan-ly-nguyen-vong-xet-tuyen-lop-10.php" class="menu-item <?php echo $activePage === 'wishes' ? 'active' : ''; ?>">
             <span class="menu-icon">✓</span>
             <span>Nguyện vọng xét tuyển</span>
         </a>
@@ -32,6 +32,11 @@
         </a>
 
         <div class="menu-title">KỲ THI</div>
+
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/so-gd/cap-so-bao-danh.php" class="menu-item <?php echo $activePage === 'candidate-sbd' ? 'active' : ''; ?>">
+            <span class="menu-icon">🪪</span>
+            <span>Cấp số báo danh</span>
+        </a>
 
         <a href="#" class="menu-item">
             <span class="menu-icon">□</span>
@@ -63,9 +68,9 @@
             <span>Xét tuyển NV1, NV2, NV3</span>
         </a>
 
-        <a href="#" class="menu-item">
+        <a href="<?php echo htmlspecialchars($appBase); ?>/pages/hoc-sinh/tra-cuu-ket-qua-xet-tuyen.php" class="menu-item <?php echo $activePage === 'admission-result' ? 'active' : ''; ?>">
             <span class="menu-icon">▥</span>
-            <span>Kết quả tuyển sinh</span>
+            <span>Tra cứu kết quả xét tuyển</span>
         </a>
     </nav>
 </aside>
