@@ -1,0 +1,645 @@
+/* ==========================================================================
+   Stylesheet: Phân phòng thi cho thí sinh (Use Case 7 - Ban Tuyển sinh Sở GD&ĐT)
+   Hệ thống Quản lý tuyển sinh lớp 10
+   ========================================================================== */
+
+/* Thanh công cụ mô phỏng kịch bản (Scenario Testing Bar) */
+.simulation-bar {
+    background: #fdf8e6;
+    border: 1px solid #f6e0a4;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.simulation-bar-info strong {
+    color: #875a00;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.simulation-bar-info span {
+    color: #6d4b00;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+}
+
+.simulation-btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.simulation-btn {
+    background: #ffffff;
+    border: 1px solid #d8dee7;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.simulation-btn:hover {
+    background: #1769e0;
+    color: #ffffff;
+    border-color: #1769e0;
+}
+
+.simulation-btn.active-error {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #b91c1c;
+}
+
+/* Banner điều kiện tiên quyết */
+.precondition-card {
+    background: #f0f7ff;
+    border: 1px solid #c9e1fc;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.precondition-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.precondition-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #1769e0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.precondition-text h4 {
+    margin: 0 0 3px 0;
+    font-size: 13px;
+    color: #124da7;
+}
+
+.precondition-text p {
+    margin: 0;
+    font-size: 12px;
+    color: #4b5563;
+}
+
+/* Thống kê phân phòng */
+.assign-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.assign-stat-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.assign-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.assign-stat-icon.blue {
+    background: #e8f1ff;
+    color: #1769e0;
+}
+
+.assign-stat-icon.green {
+    background: #e7f8f0;
+    color: #159465;
+}
+
+.assign-stat-icon.orange {
+    background: #fff5e6;
+    color: #d97706;
+}
+
+.assign-stat-icon.purple {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.assign-stat-info span {
+    font-size: 11px;
+    color: #7b8492;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.assign-stat-info h3 {
+    margin: 4px 0 0 0;
+    font-size: 22px;
+    color: #252b36;
+    font-weight: 700;
+}
+
+/* Bộ chọn kỳ thi & điểm thi (Basic Flow 2 & 3) */
+.assign-selector-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.assign-selector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f4f8;
+}
+
+.assign-selector-header h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #252b36;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.assign-selector-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+/* Thông tin tổng quan điểm thi & Quy tắc khu vực (Basic Flow 4) */
+.venue-rule-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 22px;
+}
+
+.venue-rule-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+}
+
+.venue-rule-detail {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 13px;
+}
+
+.venue-rule-detail h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rule-tag {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.eligible-schools-list {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Thẻ trạng thái từng phòng thi (Room Capacity Cards) */
+.rooms-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.room-card-status {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px;
+    transition: all 0.2s ease;
+}
+
+.room-card-status.is-full {
+    border-color: #159465;
+    background: #f0fdf4;
+}
+
+.room-card-status.has-space {
+    border-color: #1769e0;
+}
+
+.room-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.room-card-header strong {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.room-card-meter {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 8px 0 6px;
+}
+
+.room-card-fill {
+    height: 100%;
+    background: #1769e0;
+    transition: width 0.3s ease;
+}
+
+.room-card-fill.full {
+    background: #159465;
+}
+
+.room-card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* Bảng danh sách thí sinh và phòng phân */
+.candidate-row-unassigned {
+    background: #fffbf0;
+}
+
+.candidate-row-assigned {
+    background: #ffffff;
+}
+
+.candidate-row-conflict {
+    background: #fff1f2 !important;
+}
+
+.school-badge {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.school-badge.conflict {
+    background: #fee2e2;
+    color: #dc2626;
+    font-weight: 700;
+}
+
+.select-room-dropdown {
+    padding: 6px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 12px;
+    background: #ffffff;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.select-room-dropdown:focus {
+    outline: none;
+    border-color: #1769e0;
+}
+
+/* Modal xác nhận lưu phân phòng */
+.assign-modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 620px;
+    width: calc(100% - 32px);
+    border: none;
+    border-radius: 14px;
+    padding: 0;
+    box-shadow: 0 24px 70px rgba(18, 25, 38, 0.35);
+    background: #ffffff;
+    color: #252b36;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.assign-modal-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    animation: modalCenterPop 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.assign-modal-dialog::backdrop {
+    background: rgba(18, 25, 38, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.assign-modal-header {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assign-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.assign-modal-body {
+    padding: 22px;
+    font-size: 13px;
+    color: #334155;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.assign-modal-footer {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Toast */
+.assign-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #1e293b;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1100;
+    animation: toastSlideUp 0.3s ease forwards;
+}
+
+.assign-toast.success {
+    background: #065f46;
+    border: 1px solid #059669;
+}
+
+.assign-toast.error {
+    background: #991b1b;
+    border: 1px solid #dc2626;
+}
+
+/* Search & Filter Bar */
+.candidate-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.candidate-filter-inputs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.candidate-search-input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    min-width: 220px;
+}
+
+.candidate-search-input:focus {
+    outline: none;
+    border-color: #1769e0;
+}
+
+/* Modal In bảng niêm yết */
+.print-modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 860px;
+    width: calc(100% - 32px);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 24px 70px rgba(18, 25, 38, 0.35);
+    background: #ffffff;
+    color: #252b36;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.print-modal-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+
+.print-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+}
+
+.official-print-paper {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    line-height: 1.4;
+}
+
+.official-header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.official-print-title {
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.official-print-subtitle {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.official-room-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 12px;
+}
+
+.official-room-table th,
+.official-room-table td {
+    border: 1px solid #333333;
+    padding: 6px 8px;
+}
+
+.official-room-table th {
+    background: #f1f5f9;
+    font-weight: bold;
+    text-align: center;
+}
+
+.official-signatures-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+    .assign-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .assign-selector-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .venue-rule-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .assign-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .candidate-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printRoomModal,
+    #printRoomModal * {
+        visibility: visible;
+    }
+
+    #printRoomModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .assign-modal-header,
+    .assign-modal-footer {
+        display: none !important;
+    }
+
+    .print-modal-body {
+        padding: 0;
+    }
+
+    .official-print-paper {
+        border: none;
+        padding: 0;
+    }
+}

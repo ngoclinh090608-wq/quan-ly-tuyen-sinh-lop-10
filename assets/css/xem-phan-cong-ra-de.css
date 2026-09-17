@@ -1,0 +1,514 @@
+/* ==========================================================================
+   Stylesheet: Xem phân công ra đề thi (Use Case 8 - Hội đồng ra đề thi)
+   Hệ thống Quản lý tuyển sinh lớp 10
+   ========================================================================== */
+
+/* Thanh kiểm thử kịch bản (Scenario Testing Bar) */
+.simulation-bar {
+    background: #fdf8e6;
+    border: 1px solid #f6e0a4;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.simulation-bar-info strong {
+    color: #875a00;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.simulation-bar-info span {
+    color: #6d4b00;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+}
+
+.simulation-btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.simulation-btn {
+    background: #ffffff;
+    border: 1px solid #d8dee7;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.simulation-btn:hover {
+    background: #1769e0;
+    color: #ffffff;
+    border-color: #1769e0;
+}
+
+.simulation-btn.active-error {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #b91c1c;
+}
+
+/* Banner điều kiện tiên quyết (Precondition Card) */
+.precondition-card {
+    background: #f0f7ff;
+    border: 1px solid #c9e1fc;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.precondition-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.precondition-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1769e0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.precondition-text h4 {
+    margin: 0 0 4px 0;
+    font-size: 13px;
+    color: #124da7;
+    font-weight: 700;
+}
+
+.precondition-text p {
+    margin: 0;
+    font-size: 12px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* Thống kê phân công */
+.assignment-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.assignment-stat-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.assignment-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.assignment-stat-icon.blue {
+    background: #e8f1ff;
+    color: #1769e0;
+}
+
+.assignment-stat-icon.green {
+    background: #e7f8f0;
+    color: #159465;
+}
+
+.assignment-stat-icon.purple {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.assignment-stat-icon.orange {
+    background: #fff5e6;
+    color: #d97706;
+}
+
+.assignment-stat-info span {
+    font-size: 11px;
+    color: #7b8492;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.assignment-stat-info h3 {
+    margin: 4px 0 0 0;
+    font-size: 20px;
+    color: #252b36;
+    font-weight: 700;
+}
+
+/* Khối chọn kỳ thi (Basic Flow 2 & 3) */
+.exam-select-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.exam-select-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f4f8;
+}
+
+.exam-select-header h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #252b36;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exam-select-grid {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+/* Danh sách các môn thi được phân công (Basic Flow 5) */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.subject-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: all 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.subject-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #1769e0;
+}
+
+.subject-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: #1769e0;
+}
+
+.subject-card.active {
+    border-color: #1769e0;
+    background: #f8fbff;
+    box-shadow: 0 0 0 2px rgba(23, 105, 224, 0.2);
+}
+
+.subject-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.subject-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 4px 0;
+}
+
+.subject-card-code {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0369a1;
+    background: #e0f2fe;
+    padding: 2px 7px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.subject-card-meta {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.subject-card-meta div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3px;
+}
+
+.subject-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px dashed #e2e8f0;
+    font-size: 12px;
+}
+
+.subject-card-footer span {
+    color: #1769e0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Khung Chi tiết phân công ra đề thi (Basic Flow 7 & 8) */
+.assignment-detail-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.assignment-detail-header {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.assignment-detail-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.assignment-detail-body {
+    padding: 24px;
+}
+
+.detail-section-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.detail-box {
+    background: #fbfcfe;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.detail-box h4 {
+    margin: 0 0 14px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.detail-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.detail-info-table td {
+    padding: 7px 0;
+    vertical-align: top;
+}
+
+.detail-info-table td.label {
+    width: 36%;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.detail-info-table td.value {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* Danh sách thành viên tổ ra đề thi */
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.team-table th,
+.team-table td {
+    border: 1px solid #e2e8f0;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.team-table th {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #334155;
+}
+
+/* Thẻ cảnh báo bảo mật & cách ly */
+.security-alert-box {
+    background: #fff8eb;
+    border: 1px solid #fde0b2;
+    border-left: 4px solid #d97706;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #78350f;
+    line-height: 1.6;
+}
+
+/* Modal In biên bản phân công ra đề */
+.print-assignment-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 820px;
+    width: calc(100% - 32px);
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 24px 70px rgba(18, 25, 38, 0.35);
+    background: #ffffff;
+    color: #252b36;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.print-assignment-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+
+.print-assignment-body {
+    padding: 24px;
+    overflow-y: auto;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+    .assignment-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail-section-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .assignment-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-select-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printAssignmentModal,
+    #printAssignmentModal * {
+        visibility: visible;
+    }
+
+    #printAssignmentModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .print-dialog-header,
+    .print-dialog-footer {
+        display: none !important;
+    }
+
+    .print-assignment-body {
+        padding: 0;
+    }
+}
